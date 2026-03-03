@@ -1,0 +1,48 @@
+﻿@model List<LojaVeiculos.Models.Interesse>
+
+
+<div>
+ 
+    <h2>Gestão da Loja</h2>
+    <div>      
+        <div><strong>Últimos Interessados (@Model.Count)</strong></div>
+        
+        <div class="table-responsive">
+        
+            <table >
+                <thead>
+              
+                    <tr>
+                        <th>Data</th>
+                        <th>Cliente</th>
+                        <th>Veículo</th>
+                        <th>Simulação</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    @foreach (var lista in Model)
+                    {
+                        <tr>
+                        
+                            <td>@lista.Data.ToString("dd/MM HH:mm")</td>
+                         
+                            <td>@lista.Nome <br> <small class="text-muted">@lista.Telefone</small></td>
+                            @* Exibe o modelo do veículo que o cliente simulou *@
+                            <td>@lista.VeiculoInteresse</td>
+                            @* Formata o valor numérico da parcela para o padrão de moeda local (R$) *@
+                            <td>@lista.ValorParcela.ToString("")</td>
+
+                            @* Coluna de ação com um botão que abre o WhatsApp do cliente diretamente *@
+                            <td>
+                                @* Link configurado para a API do WhatsApp usando o número da lista *@
+                                <a href="https://wa.me/@lista.Telefone" target="_blank" class="btn btn-sm btn-success">WhatsApp</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

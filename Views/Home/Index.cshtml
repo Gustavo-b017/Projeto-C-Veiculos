@@ -1,0 +1,49 @@
+﻿<div >
+    <div >
+        <div >
+            <div >
+                <div >
+                    <h4>Simular Financiamento</h4>
+                </div>
+                <div>
+                    <form id="formSimulacao">
+                        <div >
+                            <label >Selecione o Veículo</label>
+                            <select id="veiculo">
+                                <option value="50000">Brasilia 2023 - R$ 50.000</option>
+                                <option value="120000">Hilux 2024 - R$ 120.000</option>
+                                <option value="85000">Corolla 2020 - R$ 85.000</option>
+                            </select>
+                        </div>
+                        <div >
+                            <label>Entrada (R$)</label>
+                            <input type="number" id="entrada" placeholder="Ex: 10000" required>
+                        </div>
+                        <div >
+                            <label>Prazo (Meses)</label>
+                            <select id="meses">
+                                <option value="12">12x</option>
+                                <option value="24">24x</option>
+                                <option value="48">48x</option>
+                                <option value="60">60x</option>
+                            </select>
+                        </div>
+                        <button type="button" onclick="calcular()">Calcular Parcela</button>
+                    </form>
+                </div>
+                <div >
+                    <h3 id="resultado" >R$ 0,00 <small>/mês</small></h3>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div >
+                <h5>Tenho Interesse</h5>
+                <input type="text" id="clienteNome" placeholder="Seu Nome">
+                <input type="text" id="clienteTelefone"  placeholder="Seu Celular">
+                <button type="button" onclick="enviarInteresse()">Enviar Contato</button>
+            </div>
+        </div>
+    </div>
+</div>

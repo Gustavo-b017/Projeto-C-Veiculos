@@ -1,0 +1,66 @@
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.so
+*.dylib
+
+# Visual Studio cache/options directory
+.vs/
+.vscode/
+
+# User-specific files
+*.csproj.user
+*.sln.user
+*.suo
+*.rsuser
+
+# NuGet
+.nuget/
+*.nupkg
+*.snupkg
+
+# Build folders
+Debug/
+Release/
+x64/
+x86/
+Any CPU/
+
+# Test Results
+TestResults/
+*.trx
+
+# Application Settings (local)
+appsettings.Development.json
+appsettings.Production.json
+
+# Rider IDE
+.idea/
+*.sln.iml
+*.DotSettings
+
+# macOS
+.DS_Store
+
+# Node modules (if using any Node tools)
+node_modules/
+
+# npm
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+
+# IDEs
+.idea/
+.eclipse
+
+# Logs
+logs/
+*.log
+npm-debug.log*
